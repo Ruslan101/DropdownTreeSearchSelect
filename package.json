@@ -1,17 +1,24 @@
 {
   "name": "dropdown_tree_search_select",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Drop-down list with nested structures and search on React",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ruslan101/DropdownTreeSearchSelect"
+  },
+  "author": "Ruslan101",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ruslan101/DropdownTreeSearchSelect/issues"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
     "lodash": "^4.17.21",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-onclickoutside": "^6.12.0",
     "react-scripts": "4.0.3",
+    "sass": "^1.43.4",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

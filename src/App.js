@@ -1,25 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import DropdownTreeSearchSelect from './DropdownTreeSearchSelect/DropdownTreeSearchSelect'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = { setOption: null }
+  }
+  get options() {
+    return [{
+      text: 'Option 1',
+      child: [
+        {
+          text: 'Option 1.1',
+          value: '1.1',
+        },
+        {
+          text: 'Option 1.2',
+          value: '1.2',
+        },
+      ],
+    },
+    {
+      text: 'Option 2',
+      child: [
+        {
+          text: 'Option 2.1',
+          value: '2.1',
+        },
+        {
+          text: 'Option 2.2',
+          value: '2.2',
+        }
+      ],
+    },
+    {
+      text: 'Option 3',
+      child: [
+        {
+          text: 'Option 3.1',
+          value: '3.1',
+        },
+        {
+          text: 'Option 3.2',
+          value: '3.2',
+        }
+      ],
+    }
+  ]
+  }
+    render() {
+        return (
+            <DropdownTreeSearchSelect
+              onChange={(e) => this.setState({ setOption: e })}
+              value={this.state?.setOption.value}
+              options={this.options}
+            />
+        )
+    }
 }
-
-export default App;
